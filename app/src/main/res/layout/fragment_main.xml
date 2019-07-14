@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:overScrollMode="never">
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_gradient">
+
+        <TextView
+            android:id="@+id/text_head"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="32dp"
+            android:text="My Github Status"
+            android:textColor="#FFF"
+            android:textSize="32sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/bg_card"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/text_head"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="100dp"
+            android:layout_marginEnd="12dp"
+            android:backgroundTint="@android:color/white"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="0dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/text_head">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp">
+
+                <TextView
+                    android:id="@+id/text_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="100dp"
+                    android:text="Shohei Maeno"
+                    android:textColor="#333"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/text_location"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Tokyo, Japan"
+                    android:textColor="@android:color/darker_gray"
+                    android:textSize="16sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/text_name" />
+
+                <TextView
+                    android:id="@+id/text_label_current_streak"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="32dp"
+                    android:text="Current Streak"
+                    android:textAllCaps="true"
+                    android:textColor="@android:color/darker_gray"
+                    android:textSize="12sp"
+                    app:layout_constraintEnd_toStartOf="@id/text_label_max_streak"
+                    app:layout_constraintHorizontal_chainStyle="spread"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/text_location" />
+
+                <TextView
+                    android:id="@+id/text_label_max_streak"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Max Streak"
+                    android:textAllCaps="true"
+                    android:textColor="@android:color/darker_gray"
+                    android:textSize="12sp"
+                    app:layout_constraintEnd_toStartOf="@id/text_label_max_commit"
+                    app:layout_constraintStart_toEndOf="@id/text_label_current_streak"
+                    app:layout_constraintTop_toTopOf="@id/text_label_current_streak" />
+
+                <TextView
+                    android:id="@+id/text_label_max_commit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Max Commit"
+                    android:textAllCaps="true"
+                    android:textColor="@android:color/darker_gray"
+                    android:textSize="12sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/text_label_max_streak"
+                    app:layout_constraintTop_toTopOf="@id/text_label_current_streak" />
+
+
+                <TextView
+                    android:id="@+id/text_current_streak"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="6"
+                    android:textAllCaps="true"
+                    android:textColor="#333"
+                    android:textSize="24sp"
+                    app:layout_constraintEnd_toEndOf="@id/text_label_current_streak"
+                    app:layout_constraintStart_toStartOf="@id/text_label_current_streak"
+                    app:layout_constraintTop_toBottomOf="@id/text_label_current_streak" />
+
+                <TextView
+                    android:id="@+id/text_max_streak"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="6"
+                    android:textAllCaps="true"
+                    android:textColor="#333"
+                    android:textSize="24sp"
+                    app:layout_constraintEnd_toEndOf="@id/text_label_max_streak"
+                    app:layout_constraintStart_toStartOf="@id/text_label_max_streak"
+                    app:layout_constraintTop_toTopOf="@id/text_current_streak" />
+
+                <TextView
+                    android:id="@+id/text_max_commit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="18"
+                    android:textAllCaps="true"
+                    android:textColor="#333"
+                    android:textSize="24sp"
+                    app:layout_constraintEnd_toEndOf="@id/text_label_max_commit"
+                    app:layout_constraintStart_toStartOf="@id/text_label_max_commit"
+                    app:layout_constraintTop_toTopOf="@id/text_current_streak" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="wrap_content"
+            android:layout_height="150dp"
+            android:layout_alignTop="@id/bg_card"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="-75dp"
+            app:cardCornerRadius="75dp"
+            app:cardElevation="16dp"
+            app:layout_constraintBottom_toTopOf="@id/bg_card"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/bg_card">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/image_profile_main"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                app:civ_border_color="#FFF"
+                app:civ_border_width="4dp" />
+
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/text_repo"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:text="Repository (13)"
+            android:textColor="@android:color/white"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="@id/bg_card"
+            app:layout_constraintStart_toStartOf="@id/bg_card"
+            app:layout_constraintTop_toBottomOf="@id/bg_card" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_fragment_main"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:orientation="vertical"
+            android:overScrollMode="never"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintEnd_toEndOf="@id/bg_card"
+            app:layout_constraintStart_toStartOf="@id/bg_card"
+            app:layout_constraintTop_toBottomOf="@id/text_repo" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.core.widget.NestedScrollView>

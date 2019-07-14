@@ -1,4 +1,4 @@
-package com.fglshm.mygithubrepo
+package com.fglshm.mygithubrepo.api
 
 object ApiPaths {
 

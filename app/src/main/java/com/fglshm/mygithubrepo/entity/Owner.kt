@@ -1,8 +1,8 @@
-package com.fglshm.mygithubrepo
+package com.fglshm.mygithubrepo.entity
 
 import com.google.gson.annotations.SerializedName
 
-class User {
+class Owner {
 
     @SerializedName("login")
     var mLogin: String? = null
@@ -41,7 +41,7 @@ class User {
     var mSubscriptionsUrl: String? = null
 
     @SerializedName("organizations_url")
-    var mRrganizationsUrl: String? = null
+    var mOrganizationsUrl: String? = null
 
     @SerializedName("repos_url")
     var mReposUrl: String? = null
@@ -56,45 +56,8 @@ class User {
     var mType: String? = null
 
     @SerializedName("site_admin")
-    var mSiteAdmin: String? = null
+    var mSiteAdmin: Boolean? = null
 
-    @SerializedName("name")
-    var mName: String? = null
 
-    @SerializedName("company")
-    var mCompany: String? = null
-
-    @SerializedName("blog")
-    var mBlog: String? = null
-
-    @SerializedName("location")
-    var mLocation: String? = null
-
-    @SerializedName("email")
-    var mEmail: String? = null
-
-    @SerializedName("hireable")
-    var mHireable: String? = null
-
-    @SerializedName("bio")
-    var mBio: String? = null
-
-    @SerializedName("public_repos")
-    var mPublicRepo: String? = null
-
-    @SerializedName("public_gists")
-    var mPublicGists: String? = null
-
-    @SerializedName("followers")
-    var mFollowers: String? = null
-
-    @SerializedName("following")
-    var mFollowing: String? = null
-
-    @SerializedName("created_at")
-    var mCreatedAt: String? = null
-
-    @SerializedName("updated_at")
-    var mUpdatedAt: String? = null
 
 }
