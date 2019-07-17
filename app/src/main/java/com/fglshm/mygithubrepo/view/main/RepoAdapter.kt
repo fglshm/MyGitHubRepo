@@ -2,6 +2,7 @@ package com.fglshm.mygithubrepo.view.main
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.fglshm.mygithubrepo.ItemViewHolder
 import com.fglshm.mygithubrepo.R
@@ -24,12 +25,16 @@ class RepoAdapter : RecyclerView.Adapter<ItemViewHolder>() {
         holder.itemView.apply {
             text_repo_name.text = item?.mName
             text_language.text = item?.mLanguage
-            when (item?.mLanguage) {
-                "Kotlin" -> text_language.setBackgroundResource(R.drawable.bg_language_kt)
-                "Swift" -> text_language.setBackgroundResource(R.drawable.bg_language_swift)
-                "Python" -> text_language.setBackgroundResource(R.drawable.bg_language_py)
-            }
+            setTextBackground(item?.mLanguage, text_language)
+            text_updated_date.text = item?.mUpdatedAt
+        }
+    }
 
+    private fun setTextBackground(lang: String?, textView: TextView) {
+        when (lang) {
+            "Kotlin" -> textView.setBackgroundResource(R.drawable.bg_language_kt)
+            "Swift" -> textView.setBackgroundResource(R.drawable.bg_language_swift)
+            "Python" -> textView.setBackgroundResource(R.drawable.bg_language_py)
         }
     }
 

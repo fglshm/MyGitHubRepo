@@ -59,9 +59,10 @@ class MainFragment : BaseFragment() {
             override fun onResponse(call: Call<List<Repository>>, response: Response<List<Repository>>) {
                 val repoList = response.body()
                 repoList?.let {
+                    val sortedRepoList = it.sortedWith(compareBy { repo -> repo.mUpdatedAt }).asReversed()
                     val repoText = "Repository (${it.size})"
                     mRepoText.text = repoText
-                    mRepoAdapter.add(it)
+                    mRepoAdapter.add(sortedRepoList)
                 }
             }
         })
