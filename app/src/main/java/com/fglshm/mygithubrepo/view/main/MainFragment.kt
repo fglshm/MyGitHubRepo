@@ -10,6 +10,8 @@ import com.fglshm.extensions2.scale
 import com.fglshm.extensions2.showLogD
 import com.fglshm.mygithubrepo.R
 import com.fglshm.mygithubrepo.RetrofitInstance
+import com.fglshm.mygithubrepo.api.OAuth.clientId
+import com.fglshm.mygithubrepo.api.OAuth.clientSecret
 import com.fglshm.mygithubrepo.entity.Repository
 import com.fglshm.mygithubrepo.entity.User
 import com.fglshm.mygithubrepo.view.base.BaseFragment
@@ -28,9 +30,6 @@ class MainFragment : BaseFragment() {
     private val mRecyclerView by lazy { recycler_fragment_main }
     private val mRepoAdapter by lazy { RepoAdapter() }
     private val mRepoText by lazy { text_repo }
-
-    private val clientId = "2cfe0457f689bbc00d12"
-    private val clientSecret = "1b5994ff2aa474bfc8196c6ce1e3550b858e5161"
 
     companion object {
         fun newInstance() = MainFragment()
