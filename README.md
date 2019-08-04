@@ -1,4 +1,4 @@
 # MyGitHubRepo
-sample of using Retrofit2 on fetching repositories  
+Sample of using Retrofit2 on fetching repositories  
 
 ![](MyGitHubRepo.gif)
